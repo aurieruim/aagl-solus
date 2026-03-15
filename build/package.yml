@@ -1,7 +1,7 @@
 name       : an-anime-game-launcher
 version    : 1.0
 release    : 1
-license    : gpl
+license    : GPL-3.0
 component  : games
 summary    : Anime game launcher
 description: |
