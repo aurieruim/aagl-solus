@@ -1,0 +1,23 @@
+name       : an-anime-game-launcher
+version    : 1.0
+release    : 1
+license    : gpl
+component  : games
+summary    : Anime game launcher
+description: |
+    Simple launcher for anime game.
+
+rundeps:
+    - libadwaita
+
+build      : |
+    echo "nothing to build"
+
+install    : |
+    install -Dm755 files/anime-game-launcher $installdir/usr/bin/anime-game-launcher
+
+    install -Dm644 files/an-anime-game-launcher.desktop \
+        $installdir/usr/share/applications/an-anime-game-launcher.desktop
+
+    install -Dm644 files/moe.launcher.an-anime-game-launcher.png \
+        $installdir/usr/share/icons/hicolor/256x256/apps/moe.launcher.an-anime-game-launcher.png
