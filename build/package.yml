@@ -11,15 +11,18 @@ description: |
 
 rundeps:
     - libadwaita
+    - libcairo
+    - libgtk-4
+    - perl-pango
 
 build      : |
     echo "nothing to build"
 
 install    : |
-    install -Dm755 files/anime-game-launcher $installdir/usr/bin/anime-game-launcher
+    install -Dm755 $pkgfiles/anime-game-launcher $installdir/usr/bin/anime-game-launcher
 
-    install -Dm644 files/an-anime-game-launcher.desktop \
+    install -Dm644 $pkgfiles/an-anime-game-launcher.desktop \
         $installdir/usr/share/applications/an-anime-game-launcher.desktop
 
-    install -Dm644 files/moe.launcher.an-anime-game-launcher.png \
+    install -Dm644 $pkgfiles/moe.launcher.an-anime-game-launcher.png \
         $installdir/usr/share/icons/hicolor/256x256/apps/moe.launcher.an-anime-game-launcher.png
