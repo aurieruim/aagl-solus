@@ -1,0 +1,28 @@
+name       : an-anime-game-launcher
+version    : 3.18.0
+release    : 1
+license    : GPL-3.0
+component  : games
+summary    : Anime game launcher
+source :
+    - https://github.com/aurieruim/aagl-solus/releases/download/3.18.0/source-3.18.0.tar.gz : 251a3b9496fe9f8eb180faae844752c31678845e733f4042b9cb3681f0f11cff
+description: |
+     An Anime Game launcher for Linux with telemetry disabling.
+
+rundeps:
+    - libadwaita
+    - libcairo
+    - libgtk-4
+    - perl-pango
+
+build      : |
+    echo "nothing to build"
+
+install    : |
+    install -Dm755 $pkgfiles/anime-game-launcher $installdir/usr/bin/anime-game-launcher
+
+    install -Dm644 $pkgfiles/an-anime-game-launcher.desktop \
+        $installdir/usr/share/applications/an-anime-game-launcher.desktop
+
+    install -Dm644 $pkgfiles/moe.launcher.an-anime-game-launcher.png \
+        $installdir/usr/share/icons/hicolor/256x256/apps/moe.launcher.an-anime-game-launcher.png
